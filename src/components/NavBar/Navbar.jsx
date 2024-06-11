@@ -4,11 +4,19 @@ import { menus } from "../../data";
 import SocialHandles from "../../commons/SocialHandles/SocialHandles";
 import { CiMenuFries } from "react-icons/ci";
 import Sidebar from "../../commons/Sidebar/Sidebar";
+import { useState } from "react";
 
 const Navbar = () => {
+  const [openSidebar, setOpenSidebar] = useState(false);
+
+  const toggleBtn = () => {
+    setOpenSidebar((op) => !op);
+  };
+
   return (
     <nav className="navigation__bar">
-      <Sidebar />
+      <Sidebar open={openSidebar} onClose={toggleBtn} />
+
       <div className="column">
         <Logo />
       </div>
@@ -27,7 +35,7 @@ const Navbar = () => {
           Let&apos;s Talk
         </a>
 
-        <div className="menu__icon">
+        <div className="menu__icon" onClick={() => setOpenSidebar((op) => !op)}>
           <CiMenuFries />
         </div>
       </div>
