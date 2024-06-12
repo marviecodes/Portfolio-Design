@@ -12,11 +12,13 @@ dist
 dist-ssr
 *.local
 
+# Ignore notes.txt
+notes.txt
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
 .idea
-*.txt
 .DS_Store
 *.suo
 *.ntvs*
