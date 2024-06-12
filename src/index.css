@@ -53,7 +53,7 @@
   outline: none;
   border: none;
   text-decoration: none;
-  scrollbar-color: var(--color-primary) transparent;
+  scrollbar-color: var(--gray-border) transparent;
   scrollbar-width: thin;
 }
 
@@ -128,8 +128,8 @@ img {
   background-clip: text;
 }
 
-.stroke-text {
-  -webkit-web-stroke: 0.7px rgba(0, 0, 255, 0.176);
+.stroke__text {
+  -webkit-text-stroke: 0.7px rgba(0, 0, 255, 0.176);
   -webkit-text-fill-color: transparent;
 }
 
@@ -236,6 +236,7 @@ img {
   position: relative;
 }
 .blur-effect::before {
+  content: "";
   position: absolute;
   width: 322px;
   height: 308px;
@@ -246,7 +247,7 @@ img {
   z-index: 0;
 }
 
-@media (max-width: 1500px) {
+@media (min-width: 1500px) {
   .container.full__height {
     min-height: auto;
   }
@@ -257,6 +258,7 @@ img {
     font-size: 40px;
   }
 }
+
 @media (max-width: 1500px) {
   .title {
     font-size: 30px;
